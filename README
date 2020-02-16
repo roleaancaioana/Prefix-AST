@@ -1,0 +1,22 @@
+Pentru implementarea solutiei problemei am utilizat o functie recursiva 
+"traverse_ast" pentru a parcurge arborele in postordine si a-l evalua. 
+Practic, voi face calculele in timp ce voi traversa arborele. 
+
+Mai exact, algoritmul de calcul este urmatorul:
+==> parcurg subarborele stang mai intai si efectuez operatiile ce reies 
+din acel subarbore, retin rezultatul obtinut pe stiva, apoi voi parcurge 
+subarborele drept, voi face calculele ce reies din acest subarbore, iar 
+la final voi extrage de pe stiva rezultatul obtinut din subarborele stang 
+pentru a putea calcula impreuna cu rezultatul obtinut din subarborele drept 
+rezultatul final al expresiei matematice.
+
+De asemenea, atunci cand voi avea un arbore/subarbore format doar 
+din 3 noduri, algoritmul utilizat pentru a efectua operatia caracteristica 
+lui este urmatorul:
+==> cu ajutorul functiei "atoi" voi converti datele din frunze la un 
+intreg deoarece ele initial sunt vazute ca niste string-uri, voi retine 
+pe stiva valoarea din nodul stang, iar apoi cand voi ajunge la nodul radacina, 
+cel care-mi sugereaza si operatia ce urmeaza a fi efectuata, voi scoate de pe 
+stiva valoarea ce se afla in nodul stang si voi efectua operatia potrivita 
+avand ca al doilea operand valoarea din nodul drept.
+
